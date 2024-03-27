@@ -1,17 +1,12 @@
-import React, { useState } from 'react';
 
+import top from "/top.jpg";
 function Home() {
-
-    const [count, setCount] = useState(0);
-
-    return (
-        <div>
-            <h1>Welcome to the Home Page</h1>
-            <p>Click count: {count}</p>
-            <button onClick={() => setCount(count + 1)}>Click me</button>
-        </div>
-    );
+  return (
+    <div>
+      <h1>Welcome to the Home Page</h1>
+      <img src={top} alt="picture of the background" />
+    </div>
+  );
 }
 
 export default Home;
-

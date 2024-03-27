@@ -1,35 +1,34 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-
-import Layout from './components/Layout';
+import { Routes, Route, Navigate } from "react-router-dom";
+import { useState } from "react"; 
+import Layout from "./components/Layout";
+import About from "./components/About";
+import Gallery from "./components/Gallery";
+import Contact from "./components/Contact";
+import Home from "./components/Home";
+import Intro from './components/Intro';
 
 function App() {
-  const location = useLocation();
-
-  useEffect(() => {
-    localStorage.setItem('lastVisitedRoute', location.pathname);
-  }, [location]);
-
-  useEffect(() => {
-    const lastVisitedRoute = localStorage.getItem('lastVisitedRoute');
-    if (!lastVisitedRoute || lastVisitedRoute === '/home') {
-      const currentPath = window.location.pathname;
-      if (currentPath !== '/home') {
-        window.location.href = '/home';
-      }
-    }
-  }, []);
+  const [introCompleted, setIntroCompleted] = useState(false);
+  const handleIntroComplete = () => {
+    setIntroCompleted(true);
+  };
 
   return (
-    <Layout />
+    <Routes>
+      {!introCompleted && <Route path="/" element={<Intro onComplete={handleIntroComplete} />} />}
+      {introCompleted && (
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Route>
+      )}
+    </Routes>
   );
 }
 
 export default App;
-
-
-
-
-
 
 

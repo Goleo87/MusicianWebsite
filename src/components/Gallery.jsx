@@ -1,15 +1,15 @@
-import  { useState } from 'react';
+import React, { useState } from "react";
 
 function Gallery() {
-  const [images, setImages] = useState(['img1.jpg', 'img2.jpg', 'img3.jpg']); // Placeholderimage names
+  const [images, setImage] = useState(["back.png", "bridge.jpg", "OIP.jpeg"]);
+  useState(images);
 
-  
   return (
     <div>
       <h1>Gallery</h1>
       <div>
         {images.map((image, index) => (
-          <img key={index} src={image} alt={`Gallery ${index}`} />
+          <img key={index} src={image} alt={`gallery ${index}`} />
         ))}
       </div>
     </div>
