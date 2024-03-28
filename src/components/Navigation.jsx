@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
-import top from "/top.jpg";
+import Logo from "/LogoSB.png";
 
 function Navigation() {
   return (
     <div className="navigation">
      
-      <nav>
+      <nav >
         <ul>
           <li>
             <NavLink to="/home">Home</NavLink>
@@ -17,13 +17,13 @@ function Navigation() {
             <NavLink to="/Gallery">Gallery</NavLink>
           </li>
           <li>
-            <NavLink to="/Contact">contact</NavLink>
+            <NavLink to="/Contact">Contact</NavLink>
           </li>
         </ul>
       </nav>
       <div className="logo">
         <NavLink to="/">
-          <img src={top} alt="picture of the background" />
+          <img src={Logo} alt="picture of the background" />
         </NavLink>
       </div>
     </div>

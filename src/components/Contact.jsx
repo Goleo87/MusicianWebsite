@@ -65,9 +65,9 @@ function Contact() {
   };
 
   return (
-    <div>
+    <div className='form-container'>
       <h1>Contact me</h1>
-      <form onSubmit={handleSubmit}>
+      <form className='form' onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input
           type="text"

@@ -1,5 +1,5 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-import { useState } from "react"; 
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react"; 
 import Layout from "./components/Layout";
 import About from "./components/About";
 import Gallery from "./components/Gallery";
@@ -12,6 +12,15 @@ function App() {
   const handleIntroComplete = () => {
     setIntroCompleted(true);
   };
+  
+  const location = useLocation();
+  
+  useEffect(() => {
+    if (!introCompleted && location.pathname !== "/") {
+      // If intro is not completed and the current path is not the homepage
+      window.location.href = "/"; // Redirect to homepage
+    }
+  }, [introCompleted, location]);
 
   return (
     <Routes>
@@ -30,5 +39,6 @@ function App() {
 }
 
 export default App;
+
 
 

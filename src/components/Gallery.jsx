@@ -5,9 +5,9 @@ function Gallery() {
   useState(images);
 
   return (
-    <div>
+    <div className="gallery-container">
       <h1>Gallery</h1>
-      <div>
+      <div className="gallery">
         {images.map((image, index) => (
           <img key={index} src={image} alt={`gallery ${index}`} />
         ))}

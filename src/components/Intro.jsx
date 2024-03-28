@@ -1,28 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 
 function Intro({ onComplete }) {
-    const [redirect, setRedirect] = useState(false);
-  
-    // Function to handle click and initiate redirect
-    const handleClick = () => {
-      setRedirect(true);
+  const [redirect, setRedirect] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setRedirect(true); // Set redirect to true after a certain duration
       onComplete(); // Call the onComplete function provided by props
-    };
-  
-    return redirect ? (
-      <Navigate to="/" />
-    ) : (
-      <div className="intro-container" onClick={handleClick}>
-        <div className="intro-content">
-          <img
-            className="intro-image"
-            src="youtube.png" // Replace with the path to your intro image
-            alt="Intro"
-          />
-        </div>
+    }, 3000); // Adjust the duration as needed (3000 milliseconds = 3 seconds)
+
+    // Clear the timer on component unmount to avoid memory leaks
+    return () => clearTimeout(timer);
+  }, [onComplete]);
+
+  return redirect ? (
+    <Navigate to="/" />
+  ) : (
+    <div className="intro-container">
+      <div className="intro-content">
+        <img
+          className="intro-image"
+          src="Intro.png" // Replace with the path to your intro image
+          alt="Intro"
+        />
       </div>
-    );
-  }
-  
-  export default Intro;
+    </div>
+  );
+}
+
+export default Intro;
+

@@ -1,8 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Quicksand", sans-serif;
   box-sizing: border-box;
+  font-optical-sizing: auto;
+  font-feature-settings: "kern" 1;
+  font-style: normal;
 }
 
 html,
@@ -10,7 +14,9 @@ body,
 #root,
 .app {
   margin: 0;
-  background: black;
+  background-image: url('/public/back.png'); 
+  background-size: cover;
+
 }
 
 .app {
@@ -22,8 +28,16 @@ body,
       margin: 20px;
       a {
         img {
-          height: 150px;
+          height: 100px;
+          filter: drop-shadow(0 0 5px rgb(115, 115, 115)); 
+          transition: filter 0.3s, color 0.3s; 
         }
+        
+        img:hover {
+          filter: drop-shadow(0 0 5px rgb(255, 0, 123)); 
+            color: #333; 
+        }
+        
       }
     }
     nav {
@@ -38,22 +52,29 @@ body,
           margin: 0 20px;
           a {
             text-decoration: none;
-            font-size: 20px;
+            font-size: 50px;
             color: white;
+          }
+          a:hover {
+            filter: drop-shadow(0 0 5px rgb(255, 0, 123)); 
+            transition: filter 0.3s, color 0.3s;
           }
           .selected {
             color: #579de6;
           }
         }
+     
       }
+    
     }
   }
   main {
-    margin-top: 50px;
+    margin-top: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
+    margin-bottom: 50px;
     img {
       max-width: 700px;
     }
@@ -71,50 +92,179 @@ body,
       border: 1px solid red; 
       background-color: red;
     }
+    .sending {
+      border: 1px solid blue; 
+      background-color: blue;
+    }
+
+    .success {
+      border: 1px solid green; 
+      background-color: green;
+    }
   }
-}
-.footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  font-size: 14px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 15%;
+  .homepage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
 
-}
 
-.social-icons {
+    background-color: rgba(255, 0, 89, 0.09); /* Glass effect background */
+    border: 2px solid rgba(0, 0, 0, 0.363); /* 3D border */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  }
+.text {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
-  margin-top: 5px;
-}
-h4 {
- display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 15px;
-  margin-top: 5px;
-
-}
-.social-icons a {
+  padding-left:  10px;
+  margin-left: 50px;
+  width: 100%;
+  height: 100%;
   color: #fff;
-  margin: 0 10px;
+  background-color: rgba(0, 0, 0, 0.364); /* Add background color */
+  border-radius: 10px; /* Add border radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
+}
+.biography {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin-bottom: 70px; /* Center the container horizontally */
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.364); /* Add background color */
+  border-radius: 10px; /* Add border radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
 
 }
 
+.biography p {
+  text-align: justify; /* Justify the paragraphs */
+  width: 90%;
+  margin: 10px 0; /* Add margin between paragraphs */
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+
+  
+  .galerry-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+
+  }
+  .gallery img {
+    width: 200px; /* Set the width of the images */
+    height: 200px; /* Set the height of the images */
+    margin: 10px; /* Add margin to create spacing between images */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    filter: grayscale(100%); /* Apply grayscale effect to all images */
+    transition: filter 0.3s, box-shadow 0.3s; /* Smooth transition for filter and box-shadow */
+  }
+
+  .gallery img:hover {
+    filter: grayscale(0%); /* Remove grayscale on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow effect on hover */
+  }
+  
+  .form-container {
+    width: 500px; /* Adjust the width of the form container */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.081); /* Transparent white background for the glass effect */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a 3D shadow effect */
+  }
+  
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the form elements vertically */
+    
+  }
+  
+  .form input, .form button {
+    margin: 10px 0; /* Add margin between form elements */
+    padding: 10px; /* Add padding to form elements */
+    width: 100%; /* Make form elements take full width */
+    border: none; /* Remove default borders */
+    border-radius: 5px; /* Apply border radius */
+    outline: none; /* Remove outline on focus */
+  }
+  
+  .form button {
+    background-color: #6b6b6b; /* Button background color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition effect for background color */
+  }
+  
+  .form button:hover {
+    background-color: #45a049; /* Darken button background color on hover */
+  }
+  .footer {
+    background-color: rgba(153, 153, 153, 0.073); /* Adjust transparency for better visibility */
+    color: #fff;
+    padding: 10px; /* Decrease padding for a smaller footer */
+    text-align: center;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%; /* Decrease height for a smaller footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adjust shadow effect */
+    filter: blur(0.5px); /* Add a blur effect to the footer */
+  }
+  
+  .social-icons a {
+    width: 40px; /* Adjust the width of the icons as needed */
+    height: auto; /* Maintain aspect ratio */
+    color: #fff; /* Set icon color to white */
+    margin: 0 10px; /* Add margin between icons */
+    filter: drop-shadow(0 0 5px rgba(108, 108, 108, 0.7)); /* Add a shadow effect to the icons */
+    transition: filter 0.3s; /* Smooth transition effect for the shadow */
+  }
+  
+  .social-icons a:hover {
+    filter: drop-shadow(0 0 10px rgba(255, 0, 123, 0.7)); /* Adjust the hover shadow color */
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin-top: 5px;
+  }
+  
+  h4 {
+    margin: 0; /* Remove default margin */
+    font-size: 20px;
+  }
+  
+  
+  
+}
 .intro-container {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff; /* Change the background color if needed */
+  background-image:  url('/public/back.png');
+  background-size: cover;
   overflow: hidden;
 }
 
@@ -130,4 +280,74 @@ h4 {
 .intro-image {
   max-width: 100%;
   max-height: 100%;
+}
+
+/* Mobile version */
+@media (max-width: 768px) {
+  .app .navigation {
+    .logo {
+      margin: 10px;
+      a img {
+        height: 80px;
+      }
+    }
+    nav ul li {
+      display:flexbox;
+      justify-content: center;
+      margin: 0 10px;
+      font-size: 30px;
+    }
+  }
+
+  .main {
+    margin-top: 20px;
+  }
+
+  .gallery img {
+    max-width: 90%; /* Reduce the width of images */
+    max-height: auto; /* Allow images to adjust height */
+    margin: 10px; /* Add margin around images */
+  }
+
+  .form-container {
+    width: 90%; /* Adjust the width of the form container */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    box-shadow: none; /* Remove box shadow for mobile */
+  }
+
+  .form input,
+  .form button {
+    margin: 10px 0; /* Add margin between form elements */
+    width: 100%; /* Make form elements take full width */
+  }
+
+  .footer {
+    padding: 15px; /* Reduce padding for mobile */
+    height: auto; /* Auto height for mobile */
+  }
+
+  .social-icons a {
+    width: 30px; /* Adjust the width of the icons for mobile */
+    margin: 0 5px; /* Reduce margin between icons for mobile */
+    font-size: 24px; /* Reduce font size for mobile */
+  }
+
+  .social-icons {
+    font-size: 30px; /* Adjust font size for social icons for mobile */
+  }
+
+  h4 {
+    font-size: 16px; /* Reduce font size for mobile */
+  }
+
+  .intro-container {
+    height: 100%; /* Adjust height for mobile */
+    padding: 20px; /* Add padding for mobile */
+  }
+
+  .intro-image {
+    max-width: 100%; /* Adjust width for mobile */
+    max-height: 100%; /* Adjust height for mobile */
+  }
 }
