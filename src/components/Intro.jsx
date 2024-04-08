@@ -8,7 +8,7 @@ function Intro({ onComplete }) {
     const timer = setTimeout(() => {
       setRedirect(true); // Set redirect to true after a certain duration
       onComplete(); // Call the onComplete function provided by props
-    }, 3000); // Adjust the duration as needed (3000 milliseconds = 3 seconds)
+    }, 1000); // Adjust the duration as needed (3000 milliseconds = 3 seconds)
 
     // Clear the timer on component unmount to avoid memory leaks
     return () => clearTimeout(timer);

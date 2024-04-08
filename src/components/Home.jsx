@@ -1,19 +1,20 @@
-
 import Fano from "/Fano1.png";
 function Home() {
   return (
     <div className="homepage">
       <div className="text">
-        <h2>Welcome to my website
-        </h2>
+        <h1>Welcome to my Portfolio</h1>
         <p>
-          This is the home page where you can
-          find some information about me.
-          <p>You can navigate to other pages using the
-          links above.</p> 
+          Hello!, My name is Stefano and I am a web developer, Producer, Content
+          Creator based in Germany.{" "}
+        </p>
+        <p>
+          I am passionate about creating and developing websites, music, and
+          videos. I am always looking for new projects and collaborations. Feel
+          free to contact me.
         </p>
       </div>
-      <img className="hme" src={Fano} alt="picture of the intro" />
+      <img className="Img1" src={Fano} alt="picture of the intro" />
     </div>
   );
 }
