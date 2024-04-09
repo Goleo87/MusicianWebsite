@@ -14,10 +14,8 @@ function App() {
   };
   
   const location = useLocation();
-  
   useEffect(() => {
     if (!introCompleted && location.pathname !== "/") {
-      // If intro is not completed and the current path is not the homepage
       window.location.href = "/"; // Redirect to homepage
     }
   }, [introCompleted, location]);

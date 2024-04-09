@@ -1,7 +1,21 @@
+import React, { useEffect, useState } from 'react';
 import Fano from "/Fano1.png";
+
 function Home() {
+  const [showContainers, setShowContainers] = useState(false);
+
+  useEffect(() => {
+    // Set showContainers to true after a delay to trigger the animation
+    const timeoutId = setTimeout(() => {
+      setShowContainers(true);
+    }, 500); // Adjust delay as needed
+  
+    // Clean up the timeout to prevent memory leaks
+    return () => clearTimeout(timeoutId);
+  }, []);
+
   return (
-    <div className="homepage">
+    <div className={`homepage ${showContainers ? 'show' : ''}`}>
       <div className="text">
         <h1>Welcome to my Portfolio</h1>
         <p>
@@ -14,9 +28,13 @@ function Home() {
           free to contact me.
         </p>
       </div>
-      <img className="Img1" src={Fano} alt="picture of the intro" />
+      <div className={`image ${showContainers ? 'show' : ''}`}>
+        <img src={Fano} alt="picture of the intro" />
+      </div>
     </div>
+    
   );
 }
 
 export default Home;
+

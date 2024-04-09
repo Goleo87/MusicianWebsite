@@ -85,7 +85,7 @@ function Contact() {
           placeholder="Your Email"
         />
         <label htmlFor="message">Message:</label>
-        <textarea
+        <textarea className='message-input'
           name="message"
           value={formData.message}
           onChange={handleChange}

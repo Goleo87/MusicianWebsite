@@ -16,6 +16,7 @@ body,
   margin: 0;
   background-image: url('/public/back.png'); 
   background-size: cover;
+  background-attachment: fixed;
 
 }
 
@@ -56,13 +57,15 @@ body,
             color: white;
           }
           a:hover {
+            
             filter: drop-shadow(0 0 5px rgb(255, 0, 123)); 
             transition: filter 0.3s, color 0.3s;
-          }
-          .selected {
-            color: #579de6;
+            transform: translateY(-3px);
+            cursor: pointer;
+            
           }
         }
+        
      
       }
     
@@ -76,7 +79,8 @@ body,
     color: white;
     margin-bottom: 50px;
     img {
-      max-width: 700px;
+      max-width: 100%;
+      height: auto;
     }
     h1 {
       text-align: center;
@@ -104,80 +108,170 @@ body,
   }
   .homepage {
     display: flex;
-    width: 60%;
-    height: 100%;
+    width: 85%;
+    height: 60%;
     margin: auto;
-    justify-content: space-evenly;
+    margin-bottom: 70px;
+    justify-content: space-between; /* Adjusted */
+    align-items: center; /* Added */
     background-color: rgba(255, 0, 89, 0.09); /* Glass effect background */
     border: 2px solid rgba(0, 0, 0, 0.363); /* 3D border */
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+
+ 
+    
+    
+    .text {
+      width: 65%; /* Adjusted */
+      height: 40%;
+      background-color: rgba(0, 0, 0, 0.364); /* Add background color */
+      border-radius: 10px; /* Add border radius */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
+      margin: auto;
+      margin-left: 5%;
+      margin-top: 5%;
+      margin-bottom: 5%;
+      margin-right: 5%;
+      padding: 20px;
+       h1 {
+        text-align: center;
+        margin: auto;
+        font-size: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+       p {
+        text-align: left; 
+        width: 100%;
+        margin:auto;
+        font-size: 25px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+    
+    .image  {
+      width: 25%;
+      height: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0%;
+      img {
+        max-width: 100%; /* Ensure the image fits perfectly within its container */
+        max-height: 100%;
+        object-fit: cover; /* Maintain aspect ratio and cover the container */
+        margin-bottom: 0%;
+      }
+    }
+    
   }
-.text {
-  display: block;
-  margin: auto;
-  margin-left: 5%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  margin-right: 5%;
-  justify-content: center;
-  align-items: center;
-  padding-left:  10px;
-  padding-right: 10px;
-  width: 65%;
-  height: 20%;
-  background-color: rgba(0, 0, 0, 0.364); /* Add background color */
-  border-radius: 10px; /* Add border radius */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
-}
-text h1 {
-  text-align: center;
-  font-size: 40px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.text p {
-  text-align: left; /* Justify the paragraphs */
-  width: 100%;
-  margin: 10px 0; /* Add margin between paragraphs */
-  font-size: 25px;
-  padding-bottom: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.Img1 {
-  display: block;
-  margin: auto;
-  width: 20%;
-  height: 10%;
-
-
-
-}
-.biography {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 70%;
-  margin-bottom: 70px; /* Center the container horizontally */
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.364); /* Add background color */
-  border-radius: 10px; /* Add border radius */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
-
-}
-
-.biography p {
-  text-align: justify; /* Justify the paragraphs */
-  width: 90%;
-  margin: 10px 0; /* Add margin between paragraphs */
-  font-size: 20px;
-  padding-bottom: 20px;
-}
-
-
   
+  .homepage .text,
+  .homepage .image {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Add transition effect for opacity */
+  }
+  
+  .homepage.show .text,
+  .homepage.show .image {
+    opacity: 1;
+  }
+
+
+
+
+  .biography {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 0, 89, 0.09); /* Glass effect background */
+    border: 2px solid rgba(0, 0, 0, 0.363); /* 3D border */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+
+  }
+  
+  .biography h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .biography h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .biography p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .github-projects, .audiovisual-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .project-card1 {
+    width: 48%; /* Adjust width as needed */
+    margin-bottom: 20px;
+  }
+  
+  .project-card1 img {
+    width: 100%; /* Ensure images fill their container */
+    border-radius: 5px;
+  }
+  
+  .project-card1 button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .project-card1 button:hover {
+    background-color: #0056b3;
+  }
+  
+  .video-container {
+    width: 48%; /* Adjust width as needed */
+    margin-bottom: 20px;
+  }
+  
+  .video-container iframe {
+    width: 100%; /* Ensure videos fill their container */
+  }
+  
+  .video-container button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .video-container button:hover {
+    background-color: #0056b3;
+  }
+  
+
   .galerry-container {
     display: flex;
     flex-wrap: wrap;
@@ -186,9 +280,9 @@ text h1 {
 
   }
   .gallery img {
-    width: 200px; /* Set the width of the images */
-    height: 200px; /* Set the height of the images */
-    margin: 10px; /* Add margin to create spacing between images */
+    width: 200px; 
+    height: 200px; 
+    margin: 10px; 
     object-fit: cover; /* Maintain aspect ratio and cover the container */
     filter: grayscale(100%); /* Apply grayscale effect to all images */
     transition: filter 0.3s, box-shadow 0.3s; /* Smooth transition for filter and box-shadow */
@@ -200,62 +294,83 @@ text h1 {
   }
   
   .form-container {
-    width: 500px; /* Adjust the width of the form container */
-    margin: 0 auto; /* Center the form horizontally */
-    padding: 20px;
+    width: 30%; /* Adjust width to be responsive */
+    margin: auto;
+    padding: 10px;
     background-color: rgba(255, 255, 255, 0.081); /* Transparent white background for the glass effect */
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a 3D shadow effect */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    margin-bottom: 20px;
   }
   
   
   .form {
+    width: 100%; /* Adjust width to be responsive */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the form elements vertically */
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  
     
   }
   
-  .form input, .form button {
+  .form input {
     margin: 10px 0; /* Add margin between form elements */
     padding: 10px; /* Add padding to form elements */
-    width: 100%; /* Make form elements take full width */
+    width: 80%; /* Make form elements take full width */
     border: none; /* Remove default borders */
     border-radius: 5px; /* Apply border radius */
     outline: none; /* Remove outline on focus */
+  }
+  .message-input {
+    margin: auto;
+    margin-top: 10px;
+    height: 100px; /* Adjust height for message input */
+    width: 80%;
   }
   
   .form button {
     background-color: #6b6b6b; /* Button background color */
     color: white; /* Button text color */
     cursor: pointer; /* Change cursor to pointer on hover */
-    transition: background-color 0.3s; /* Smooth transition effect for background color */
+    transition: background-color 0.3s; /* Smooth transition effect for background color margin: 10px 0; /* Add margin between form elements */
+    padding: 10px; /* Add padding to form elements */
+    width: 20%; /* Make form elements take full width */
+    border: none; /* Remove default borders */
+    border-radius: 5px; /* Apply border radius */
+    outline: none; /* Remove outline on focus */
+    margin-top: 10px;
   }
   
   .form button:hover {
     background-color: #45a049; /* Darken button background color on hover */
   }
   .footer {
-    background-color: rgba(153, 153, 153, 0.073); /* Adjust transparency for better visibility */
+    background-color: rgba(26, 25, 25, 0.377); /* Adjust transparency for better visibility */
     margin: auto;
     color: rgba(255, 255, 255, 0.555);
-    padding: 10px; /* Decrease padding for a smaller footer */
     text-align: center;
     font-size: 14px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
     height: 10%; /* Decrease height for a smaller footer */
     display: block;
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adjust shadow effect */
     filter: blur(0.5px); /* Add a blur effect to the footer */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
   
   .social-icons a {
-    width: 40px; /* Adjust the width of the icons as needed */
+    width: 30px; /* Adjust the width of the icons as needed */
     height: auto; /* Maintain aspect ratio */
     color: #fff; /* Set icon color to white */
     margin: 0 10px; /* Add margin between icons */
@@ -271,7 +386,7 @@ text h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 25px;
     margin-top: 5px;
   }
   
