@@ -57,12 +57,9 @@ body,
             color: white;
           }
           a:hover {
-            
             filter: drop-shadow(0 0 5px rgb(255, 0, 123)); 
             transition: filter 0.3s, color 0.3s;
-            transform: translateY(-3px);
             cursor: pointer;
-            
           }
         }
         
@@ -118,10 +115,6 @@ body,
     border: 2px solid rgba(0, 0, 0, 0.363); /* 3D border */
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
-
- 
-    
-    
     .text {
       width: 65%; /* Adjusted */
       height: 40%;
@@ -179,120 +172,135 @@ body,
   .homepage.show .image {
     opacity: 1;
   }
-
-
-
-
   .biography {
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(255, 0, 89, 0.09); /* Glass effect background */
-    border: 2px solid rgba(0, 0, 0, 0.363); /* 3D border */
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  text-align: center;
+}
 
-  }
+.biography h2 {
+  margin-bottom: 20px;
+  font-size: 4rem;
+}
+
+.biography h3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+
+.bio {
   
-  .biography h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .biography h3 {
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .biography p {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
-  .github-projects, .audiovisual-projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .project-card1 {
-    width: 48%; /* Adjust width as needed */
-    margin-bottom: 20px;
-  }
-  
-  .project-card1 img {
-    width: 100%; /* Ensure images fill their container */
-    border-radius: 5px;
-  }
-  
-  .project-card1 button {
-    display: block;
+  background-color: rgba(0, 0, 0, 0.364); /* Add background color */
+  border-radius: 10px; /* Add border radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 80%;
+  max-height: 40%;
+  p {
+    text-align: left; 
     width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
+    margin:auto;
+    font-size: 25px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
-  
-  .project-card1 button:hover {
-    background-color: #0056b3;
-  }
-  
-  .video-container {
-    width: 48%; /* Adjust width as needed */
-    margin-bottom: 20px;
-  }
-  
-  .video-container iframe {
-    width: 100%; /* Ensure videos fill their container */
-  }
-  
-  .video-container button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .video-container button:hover {
-    background-color: #0056b3;
-  }
-  
+}
 
-  .galerry-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 50px;
+.github-projects,
+.audiovisual-projects {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin:0 auto;
+  margin-bottom: 5%;
+  background-color: rgba(0, 0, 0, 0.226); /* Glass effect background */
+  border: 2px solid rgba(0, 0, 0, 0.363); /* 3D border */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  padding: 20px;
+  max-width: 80%;
+  max-height: 40%;
+}
 
-  }
-  .gallery img {
-    width: 200px; 
-    height: 200px; 
-    margin: 10px; 
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
-    filter: grayscale(100%); /* Apply grayscale effect to all images */
-    transition: filter 0.3s, box-shadow 0.3s; /* Smooth transition for filter and box-shadow */
-  }
+.project-card1 {
+  justify-content: center;
+  align-items: center;
+  width: 30%; /* Adjust width as needed */
+  max-width: 50%; /* Adjust max-width as needed */
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
 
-  .gallery img:hover {
-    filter: grayscale(0%); /* Remove grayscale on hover */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow effect on hover */
-  }
-  
+.project-card1 img {
+  width: 250px; /* Ensure images fill their container */
+  height: 200px; /* Ensure aspect ratio is maintained */
+  border-radius: 5px;
+  margin: 10px;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  filter: grayscale(100%); /* Apply grayscale effect to all images */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.project-card1 img:hover, .video-container iframe:hover , .podcast-container iframe:hover{
+  filter: grayscale(0%); /* Remove grayscale on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow effect on hover */
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+.project-card1 button, .video-container button , .podcast-container button{
+  display: block;
+  margin: auto;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow */
+}
+
+.project-card1 button a , .video-container button a , .podcast-container button a{
+  text-decoration: none;
+  color: white;
+}
+
+.project-card1 button:hover, .video-container button:hover , .podcast-container button:hover{
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+.video-container , .podcast-container{
+  width: 38%; /* Adjust width as needed */
+  margin-bottom: 20px;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  max-width: 100%; /* Adjust max-width as needed */
+  max-height: 100%; /* Adjust max-height as needed */
+
+}
+.video-container iframe, .podcast-container iframe {
+  border-radius: 10px;
+  margin: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  filter: grayscale(100%); /* Apply grayscale effect to all images */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
   .form-container {
     width: 30%; /* Adjust width to be responsive */
     margin: auto;
@@ -351,7 +359,7 @@ body,
     background-color: #45a049; /* Darken button background color on hover */
   }
   .footer {
-    background-color: rgba(26, 25, 25, 0.377); /* Adjust transparency for better visibility */
+    background-color: rgba(26, 25, 25, 0.692); /* Adjust transparency for better visibility */
     margin: auto;
     color: rgba(255, 255, 255, 0.555);
     text-align: center;
@@ -360,20 +368,19 @@ body,
     display: block;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adjust shadow effect */
-    filter: blur(0.5px); /* Add a blur effect to the footer */
+    box-shadow: 0 0 10px rgb(0, 0, 0); /* Adjust shadow effect */
+    filter: blur(0,5px); /* Add a blur effect to the footer */
     text-align: center;
-    padding: 10px;
     position: fixed;
     bottom: 0;
     width: 100%;
   }
   
   .social-icons a {
-    width: 30px; /* Adjust the width of the icons as needed */
+    width: 35px; /* Adjust the width of the icons as needed */
     height: auto; /* Maintain aspect ratio */
     color: #fff; /* Set icon color to white */
-    margin: 0 10px; /* Add margin between icons */
+    margin: 10px 10px; /* Add margin between icons */
     filter: drop-shadow(0 0 5px rgba(108, 108, 108, 0.7)); /* Add a shadow effect to the icons */
     transition: filter 0.3s; /* Smooth transition effect for the shadow */
   }
@@ -386,15 +393,18 @@ body,
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
-    margin-top: 5px;
+    font-size: 30px;
+  
   }
   
   h4 {
     margin: 0; /* Remove default margin */
-    font-size: 20px;
+    font-size: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
   
   
 }
@@ -423,72 +433,196 @@ body,
   max-height: 100%;
 }
 
-/* Mobile version */
-@media (max-width: 768px) {
-  .app .navigation {
-    .logo {
-      margin: 10px;
-      a img {
-        height: 80px;
-      }
-    }
-    nav ul li {
-      display:flexbox;
-      justify-content: center;
-      margin: 0 10px;
-      font-size: 30px;
-    }
+@media only screen and (max-width: 768px) {
+  .homepage {
+    width: 95%;
   }
 
-  .main {
-    margin-top: 20px;
+  .homepage .text {
+    width: 90%;
+    height: auto;
+    margin-bottom: 5%;
   }
 
-  .gallery img {
-    max-width: 90%; /* Reduce the width of images */
-    max-height: auto; /* Allow images to adjust height */
-    margin: 10px; /* Add margin around images */
+  .homepage .text h1 {
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .homepage .text p {
+    font-size: 18px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .homepage .image {
+    width: 90%;
+    height: auto;
+    margin-bottom: 5%;
+  }
+
+  .homepage .image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
   }
 
   .form-container {
-    width: 90%; /* Adjust the width of the form container */
-    margin: 0 auto; /* Center the form horizontally */
-    padding: 20px;
-    box-shadow: none; /* Remove box shadow for mobile */
+    width: 95%;
+    margin-bottom: 20px;
   }
 
-  .form input,
+  .form {
+    width: 95%;
+  }
+
+  .form input {
+    width: 90%;
+  }
+
+  .message-input {
+    height: 80px;
+  }
+
   .form button {
-    margin: 10px 0; /* Add margin between form elements */
-    width: 100%; /* Make form elements take full width */
+    width: 30%;
+    margin-top: 10px;
+  }
+
+  .navigation {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navigation .logo {
+    margin: 0;
+  }
+
+  .navigation nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .navigation .logo a img {
+    height: 120px;
+  }
+
+  .navigation nav ul li {
+    margin: 0 30px;
+  }
+
+  .app .navigation nav ul li a {
+    font-size: 30px;
+  }
+
+  main .error,
+  main .sending,
+  main .success {
+    border-width: 2px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  .biography {
+    width: 95%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    text-align: left;
+  }
+
+  .biography h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+
+  .biography h3 {
+    font-size: 2.5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .biography p {
+    background-color: rgba(0, 0, 0, 0.226);
+    border: 2px solid rgba(0, 0, 0, 0.363);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .github-projects,
+  .audiovisual-projects {
+    max-width: 95%;
+    max-height: auto;
+    margin-bottom: 3%;
+  }
+
+  .project-card1 {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .project-card1 img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 5px;
+    filter: grayscale(100%);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .video-container iframe {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .podcast-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    margin: 10px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .project-card1 img:hover,
+  .video-container iframe:hover,
+  .podcast-container iframe:hover {
+    filter: grayscale(0%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    cursor: pointer;
   }
 
   .footer {
-    padding: 15px; /* Reduce padding for mobile */
-    height: auto; /* Auto height for mobile */
+    height: 15%;
   }
 
   .social-icons a {
-    width: 30px; /* Adjust the width of the icons for mobile */
-    margin: 0 5px; /* Reduce margin between icons for mobile */
-    font-size: 24px; /* Reduce font size for mobile */
-  }
-
-  .social-icons {
-    font-size: 30px; /* Adjust font size for social icons for mobile */
+    width: 25px;
+    margin: 5px;
   }
 
   h4 {
-    font-size: 16px; /* Reduce font size for mobile */
-  }
-
-  .intro-container {
-    height: 100%; /* Adjust height for mobile */
-    padding: 20px; /* Add padding for mobile */
-  }
-
-  .intro-image {
-    max-width: 100%; /* Adjust width for mobile */
-    max-height: 100%; /* Adjust height for mobile */
+    font-size: 8px;
+    margin-bottom: 5px;
   }
 }

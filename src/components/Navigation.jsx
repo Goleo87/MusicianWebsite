@@ -14,9 +14,6 @@ function Navigation() {
             <NavLink to="/about">About</NavLink>
           </li>
           <li>
-            <NavLink to="/Gallery">Gallery</NavLink>
-          </li>
-          <li>
             <NavLink to="/Contact">Contact</NavLink>
           </li>
         </ul>

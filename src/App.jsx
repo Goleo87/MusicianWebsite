@@ -2,7 +2,6 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react"; 
 import Layout from "./components/Layout";
 import About from "./components/About";
-import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
 import Intro from './components/Intro';
@@ -27,7 +26,6 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
