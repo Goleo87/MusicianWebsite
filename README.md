@@ -8,11 +8,17 @@ I am a Developer and Audiovisual Producer based in Germany. I am a creative pers
 Experience in HTML, CSS, JavaScript, React, Node.js and Git. I have knowledge in Hardware, Software: Windows, Linux, Adobe Creative Suite, Premiere Pro, Photoshop, Audition, Illustrator After Effects, Vegas, DaVinci, Filmora, etc.
 
 Features
-Interactive Design: The portfolio is designed to be visually appealing and user-friendly, ensuring a seamless browsing experience.
+Interactive Design:
+The portfolio is designed to be visually appealing and user-friendly, ensuring a seamless browsing experience.
+
 Project Showcase: Explore my projects showcased with detailed descriptions, screenshots, and live demos to get a glimpse of my capabilities.
+
 Skills Section: Learn about the technologies and tools I specialize in, along with my proficiency level in each area.
+
 Responsive Layout: The portfolio is optimized for various devices, including desktops, tablets, and mobile phones, ensuring accessibility across different platforms.
+
 Contact Form: Connect with me directly through the integrated contact form for inquiries, collaborations, or just to say hello!
+
 Getting Started
 To explore my portfolio, simply visit the live demo link and navigate through the different sections. Alternatively, you can clone this repository to your local machine and open the index.html file in your web browser to view the portfolio locally.
 
