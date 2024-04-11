@@ -71,6 +71,17 @@ function About() {
       {/* Audiovisual Projects Section */}
       <h3>Production & Audiovisual Projects</h3>
       <div className="audiovisual-projects">
+      <div className="video-container">
+          {/* Video 3 */}
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/cgpHopYHyRw?si=cU5unmXx_DeeEfIh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <button>
+            <a href="https://www.youtube.com/watch?v=cgpHopYHyRw" target="_blank">
+              View on YouTube
+            </a>
+          </button>
+
+        </div>
+        
         <div className="video-container">
           {/* Video 1 */}
           <iframe
@@ -120,16 +131,30 @@ function About() {
           </button>
 
         </div>
-        <div className="podcast-container">
-          {/* Spotify */}
-          <iframe  src="https://open.spotify.com/embed/show/3wi5uSOuMfbmUdZWUk3Vlh?utm_source=generator&theme=0" width="100%" height="315" frameBorder="0" allowfullscreen="100%" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        <div className="video-container">
+          {/* Video 3 */}
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/fsndZ7BaX90?si=wIC7LJsUOWHrArnc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           <button>
-            <a href="https://open.spotify.com/show/3wi5uSOuMfbmUdZWUk3Vlh" target="_blank">
-              Listen on Spotify
+            <a href="https://www.youtube.com/@danydeutsch" target="_blank">
+              View on YouTube
             </a>
           </button>
 
         </div>
+        <div className="video-container">
+          {/* Video 3 */}
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/D2jLj8p0trM?si=2xoC7bhGVJDGYbys" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <button>
+            <a href="https://www.youtube.com/@arkosolar2801" target="_blank">
+              View on YouTube
+            </a>
+          </button>
+
+        </div>
+        
+
+
+  
       </div>
     </div>
   );
