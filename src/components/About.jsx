@@ -73,7 +73,7 @@ function About() {
       <div className="audiovisual-projects">
       <div className="video-container">
           {/* Video 3 */}
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/cgpHopYHyRw?si=cU5unmXx_DeeEfIh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/cgpHopYHyRw?si=cU5unmXx_DeeEfIh" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           <button>
             <a href="https://www.youtube.com/watch?v=cgpHopYHyRw" target="_blank">
               View on YouTube
@@ -89,9 +89,9 @@ function About() {
             height="315"
             src="https://www.youtube.com/embed/ZcTmOTSIW20?si=64-po2Np9-uDVGQx"
             title="YouTube video player"
-            frameborder="0"
+            
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
+            
             allowfullscreen
           ></iframe>
           <button>
@@ -107,9 +107,8 @@ function About() {
             height="100%"
             src="https://www.youtube.com/embed/sPjQZeuE8pk?si=QxRTUM-f6b1uK1E-"
             title="YouTube video player"
-            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
+            
             allowfullscreen
           ></iframe>
           <button>
@@ -123,7 +122,7 @@ function About() {
         </div>
         <div className="video-container">
           {/* Video 3 */}
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/eANHBrdjyhE?si=dEuHEPORh3mhifar" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/eANHBrdjyhE?si=dEuHEPORh3mhifar" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
           <button>
             <a href="https://www.youtube.com/@DiariodelHostil" target="_blank">
               View on YouTube
@@ -133,7 +132,7 @@ function About() {
         </div>
         <div className="video-container">
           {/* Video 3 */}
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/fsndZ7BaX90?si=wIC7LJsUOWHrArnc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/fsndZ7BaX90?si=wIC7LJsUOWHrArnc" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
           <button>
             <a href="https://www.youtube.com/@danydeutsch" target="_blank">
               View on YouTube
@@ -143,7 +142,7 @@ function About() {
         </div>
         <div className="video-container">
           {/* Video 3 */}
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/D2jLj8p0trM?si=2xoC7bhGVJDGYbys" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/D2jLj8p0trM?si=2xoC7bhGVJDGYbys" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
           <button>
             <a href="https://www.youtube.com/@arkosolar2801" target="_blank">
               View on YouTube

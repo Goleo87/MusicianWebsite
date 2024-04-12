@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Fano from "/Fano1.png";
 
 function Home() {
@@ -18,7 +18,7 @@ function Home() {
     <div className={`homepage ${showContainers ? 'show' : ''}`}>
       <div className="text">
         <p>
-          Hello! My name is Stefano, Welcome to my single-page application portfolio! This portfolio showcases my skills, projects, and experiences in a user-friendly and interactive manner. Whether you're a potential employer, colleague, or simply curious about my work, I hope this portfolio provides you with insights into my abilities and accomplishments. {" "}
+          Hello! My name is Stefano, Welcome to my single-page application portfolio! This portfolio showcases my skills, projects, and experiences in a user-friendly and interactive manner. Whether You are a potential employer, colleague, or simply curious about my work, I hope this portfolio provides you with insights into my abilities and accomplishments. {" "}
         </p>
         <p>
       
@@ -26,7 +26,7 @@ function Home() {
         </p>
       </div>
       <div className={`image ${showContainers ? 'show' : ''}`}>
-        <img src={Fano} alt="picture of the intro" />
+        <img src={Fano} alt="ste" />
       </div>
     </div>
     
