@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
 * {
   font-family: "Quicksand", sans-serif;
@@ -14,165 +13,167 @@ body,
 #root,
 .app {
   margin: 0;
-  background-image: url('/back.png'); 
+  background-image: url("/back.png");
   background-size: cover;
   background-attachment: fixed;
-
 }
 
-.app {
-  .navigation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .logo {
-      margin: 20px;
-      a {
-        img {
-          height: 100px;
-          filter: drop-shadow(0 0 5px rgb(115, 115, 115)); 
-          transition: filter 0.3s, color 0.3s; 
-        }
-        
-        img:hover {
-          filter: drop-shadow(0 0 5px rgb(255, 0, 123)); 
-            color: #333; 
-        }
-        
-      }
-    }
-    nav {
-      ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding-inline-start: 0;
-        list-style-type: none;
-        li {
-          margin: 0 20px;
-          a {
-            text-decoration: none;
-            font-size: 50px;
-            color: white;
-          }
-          a:hover {
-            filter: drop-shadow(0 0 5px rgb(255, 0, 123)); 
-            transition: filter 0.3s, color 0.3s;
-            cursor: pointer;
-          }
-        }
-        
-     
-      }
-    
-    }
-  }
-  main {
-    margin-top: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    margin-bottom: 50px;
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 50px !important;
-    }
-    label, input {
-      display: block;
-    }
-    input {
-      margin-bottom: 20px;
-    }
-    .error {
-      border: 1px solid red; 
-      background-color: red;
-    }
-    .sending {
-      border: 1px solid blue; 
-      background-color: blue;
-    }
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .success {
-      border: 1px solid green; 
-      background-color: green;
-    }
+.logo {
+  margin: 20px;
+}
+img {
+  height: 100px;
+  filter: drop-shadow(0 0 5px rgb(115, 115, 115));
+  transition: filter 0.3s, color 0.3s;
+  
+}
+
+img:hover {
+  filter: drop-shadow(0 0 5px rgb(255, 0, 123));
+  color: #333;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline-start: 0;
+  list-style-type: none;
+}
+li {
+  margin: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 50px;
+  color: white;
+}
+a:hover {
+  filter: drop-shadow(0 0 5px rgb(255, 0, 123));
+  transition: filter 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+main {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-bottom: 50px;
+  img {
+    max-width: 100%;
+    height: auto;
   }
-  .homepage {
-    display: flex;
-    width: 85%;
-    height: 60%;
-    margin: auto;
-    margin-bottom: 70px;
-    justify-content: space-between; /* Adjusted */
-    align-items: center; /* Added */
-    background-color: rgba(255, 0, 89, 0.09); /* Glass effect background */
-    border: 2px solid rgba(0, 0, 0, 0.363); /* 3D border */
+  h1 {
+    text-align: center;
+    margin-bottom: 50px !important;
+  }
+  label,
+  input {
+    display: block;
+  }
+  input {
+    margin-bottom: 20px;
+  }
+  .error {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 90%;
+    padding: 10px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.639);
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
-    .text {
-      width: 65%; /* Adjusted */
-      height: 40%;
-      background-color: rgba(0, 0, 0, 0.364); /* Add background color */
-      border-radius: 10px; /* Add border radius */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
-      margin: auto;
-      margin-left: 5%;
-      margin-top: 5%;
-      margin-bottom: 5%;
-      margin-right: 5%;
-      padding: 20px;
-       h1 {
-        text-align: center;
-        margin: auto;
-        font-size: 40px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
-       p {
-        text-align: left; 
-        width: 100%;
-        margin:auto;
-        font-size: 25px;
-        padding-bottom: 20px;
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-    }
-    
-    .image  {
-      width: 25%;
-      height: 10%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 0%;
-      img {
-        max-width: 100%; /* Ensure the image fits perfectly within its container */
-        max-height: 100%;
-        object-fit: cover; /* Maintain aspect ratio and cover the container */
-        margin-bottom: 0%;
-      }
-    }
-    
   }
-  
-  .homepage .text,
-  .homepage .image {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out; /* Add transition effect for opacity */
+  .sending {
+    border: 1px solid blue;
+    background-color: blue;
   }
-  
-  .homepage.show .text,
-  .homepage.show .image {
-    opacity: 1;
+
+  .success {
+    border: 1px solid green;
+    background-color: green;
   }
-  .biography {
+}
+.homepage {
+  display: flex;
+  width: 85%;
+  height: 60%;
+  margin: auto;
+  margin-bottom: 70px;
+  justify-content: space-between; /* Adjusted */
+  align-items: center; /* Added */
+  background-color: rgba(255, 0, 89, 0.09); /* Glass effect background */
+  border: 2px solid rgba(0, 0, 0, 0.363); /* 3D border */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+.text {
+  width: 65%; /* Adjusted */
+  height: 40%;
+  background-color: rgba(0, 0, 0, 0.364); /* Add background color */
+  border-radius: 10px; /* Add border radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
+  margin: auto;
+  margin-left: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-right: 5%;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin: auto;
+  font-size: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+p {
+  text-align: left;
+  width: 100%;
+  margin: auto;
+  font-size: 25px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.image {
+  width: 25%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0%;
+  img {
+    max-width: 100%; /* Ensure the image fits perfectly within its container */
+    max-height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    margin-bottom: 0%;
+  }
+}
+
+.homepage .text,
+.homepage .image {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Add transition effect for opacity */
+}
+
+.homepage.show .text,
+.homepage.show .image {
+  opacity: 1;
+}
+.biography {
   text-align: center;
 }
 
@@ -188,10 +189,9 @@ body,
 }
 
 .bio {
-  
   background-color: rgba(0, 0, 0, 0.364); /* Add background color */
   border-radius: 10px; /* Add border radius */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin: 0 auto;
   margin-bottom: 20px;
   font-size: 1.5rem;
@@ -199,9 +199,9 @@ body,
   max-width: 80%;
   max-height: 40%;
   p {
-    text-align: left; 
+    text-align: left;
     width: 100%;
-    margin:auto;
+    margin: auto;
     font-size: 25px;
     padding-bottom: 20px;
     padding-left: 10px;
@@ -211,10 +211,10 @@ body,
 
 .github-projects,
 .audiovisual-projects {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin:0 auto;
+  margin: 0 auto;
   margin-bottom: 5%;
   background-color: rgba(0, 0, 0, 0.226); /* Glass effect background */
   border: 2px solid rgba(0, 0, 0, 0.363); /* 3D border */
@@ -244,7 +244,9 @@ body,
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.project-card1 img:hover, .video-container iframe:hover , .podcast-container iframe:hover{
+.project-card1 img:hover,
+.video-container iframe:hover,
+.podcast-container iframe:hover {
   filter: grayscale(0%); /* Remove grayscale on hover */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow effect on hover */
   background-color: rgba(255, 255, 255, 0.2);
@@ -252,10 +254,14 @@ body,
   cursor: pointer;
 }
 
-.project-card1 button, .video-container button , .podcast-container button{
+.project-card1 button,
+.video-container button,
+.podcast-container button {
   display: block;
-  margin: auto;
+  width: 60%;
+  margin: 0 auto;
   padding: 1rem 2rem;
+  gap: 2rem;
   font-size: 1rem;
   border: none;
   border-radius: 5px;
@@ -265,18 +271,24 @@ body,
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow */
 }
 
-.project-card1 button a , .video-container button a , .podcast-container button a{
+.project-card1 button a,
+.video-container button a,
+.podcast-container button a {
   text-decoration: none;
   color: white;
+  font-size: 1.5rem;
 }
 
-.project-card1 button:hover, .video-container button:hover , .podcast-container button:hover{
+.project-card1 button:hover,
+.video-container button:hover,
+.podcast-container button:hover {
   background-color: rgba(255, 255, 255, 0.2);
   transform: translateY(-3px);
   cursor: pointer;
 }
 
-.video-container , .podcast-container{
+.video-container,
+.podcast-container {
   width: 38%; /* Adjust width as needed */
   margin: 0 auto;
   margin-bottom: 20px;
@@ -288,9 +300,9 @@ body,
   padding: 20px;
   max-width: 100%; /* Adjust max-width as needed */
   max-height: 100%; /* Adjust max-height as needed */
-
 }
-.video-container iframe, .podcast-container iframe {
+.video-container iframe,
+.podcast-container iframe {
   border-radius: 10px;
   margin: 10px;
   max-width: 100%;
@@ -300,120 +312,127 @@ body,
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-
-  .form-container {
-    width: 30%; /* Adjust width to be responsive */
-    margin: auto;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.081); /* Transparent white background for the glass effect */
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a 3D shadow effect */
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  
-  .form {
-    width: 100%; /* Adjust width to be responsive */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-  
-    
-  }
-  
-  .form input {
-    margin: 10px 0; /* Add margin between form elements */
-    padding: 10px; /* Add padding to form elements */
-    width: 80%; /* Make form elements take full width */
-    border: none; /* Remove default borders */
-    border-radius: 5px; /* Apply border radius */
-    outline: none; /* Remove outline on focus */
-  }
-  .message-input {
-    margin: auto;
-    margin-top: 10px;
-    height: 100px; /* Adjust height for message input */
-    width: 80%;
-  }
-  
-  .form button {
-    background-color: #6b6b6b; /* Button background color */
-    color: white; /* Button text color */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: background-color 0.3s; /* Smooth transition effect for background color margin: 10px 0; /* Add margin between form elements */
-    padding: 10px; /* Add padding to form elements */
-    width: 20%; /* Make form elements take full width */
-    border: none; /* Remove default borders */
-    border-radius: 5px; /* Apply border radius */
-    outline: none; /* Remove outline on focus */
-    margin-top: 10px;
-  }
-  
-  .form button:hover {
-    background-color: #45a049; /* Darken button background color on hover */
-  }
-  .footer {
-    background-color: rgba(26, 25, 25, 0.692); /* Adjust transparency for better visibility */
-    margin: auto;
-    color: rgba(255, 255, 255, 0.555);
-    text-align: center;
-    font-size: 14px;
-    height: 10%; /* Decrease height for a smaller footer */
-    display: block;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 10px rgb(0, 0, 0); /* Adjust shadow effect */
-    filter: blur(0,5px); /* Add a blur effect to the footer */
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  .social-icons a {
-    width: 35px; /* Adjust the width of the icons as needed */
-    height: auto; /* Maintain aspect ratio */
-    color: #fff; /* Set icon color to white */
-    margin: 10px 10px; /* Add margin between icons */
-    filter: drop-shadow(0 0 5px rgba(108, 108, 108, 0.7)); /* Add a shadow effect to the icons */
-    transition: filter 0.3s; /* Smooth transition effect for the shadow */
-  }
-  
-  .social-icons a:hover {
-    filter: drop-shadow(0 0 10px rgba(255, 0, 123, 0.7)); /* Adjust the hover shadow color */
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-  
-  }
-  
-  h4 {
-    margin: 0; /* Remove default margin */
-    font-size: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
+.form-container {
+  width: 30%; /* Adjust width to be responsive */
+  margin: auto;
+  padding: 10px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.081
+  ); /* Transparent white background for the glass effect */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a 3D shadow effect */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
+
+.form {
+  width: 100%; /* Adjust width to be responsive */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.form input {
+  margin: 10px 0; /* Add margin between form elements */
+  padding: 10px; /* Add padding to form elements */
+  width: 80%; /* Make form elements take full width */
+  border: none; /* Remove default borders */
+  border-radius: 5px; /* Apply border radius */
+  outline: none; /* Remove outline on focus */
+}
+.message-input {
+  margin: auto;
+  margin-top: 10px;
+  height: 100px; /* Adjust height for message input */
+  width: 80%;
+}
+
+.form button {
+  background-color: #6b6b6b; /* Button background color */
+  color: white; /* Button text color */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s; /* Smooth transition effect for background color margin: 10px 0; /* Add margin between form elements */
+  padding: 10px; /* Add padding to form elements */
+  width: 20%; /* Make form elements take full width */
+  border: none; /* Remove default borders */
+  border-radius: 5px; /* Apply border radius */
+  outline: none; /* Remove outline on focus */
+  margin-top: 10px;
+}
+
+.form button:hover {
+  background-color: #45a049; /* Darken button background color on hover */
+}
+.footer {
+  background-color: rgba(
+    26,
+    25,
+    25,
+    0.692
+  ); /* Adjust transparency for better visibility */
+  margin: auto;
+  color: rgba(255, 255, 255, 0.555);
+  text-align: center;
+  font-size: 14px;
+  height: 10%; /* Decrease height for a smaller footer */
+  display: block;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgb(0, 0, 0); /* Adjust shadow effect */
+  filter: blur(0, 5px); /* Add a blur effect to the footer */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.social-icons a {
+  width: 3rem; /* Adjust the width of the icons as needed */
+  height: auto; /* Maintain aspect ratio */
+  color: #fff; /* Set icon color to white */
+  margin: 10px 10px; /* Add margin between icons */
+  filter: drop-shadow(
+    0 0 5px rgba(108, 108, 108, 0.7)
+  ); /* Add a shadow effect to the icons */
+  transition: filter 0.3s; /* Smooth transition effect for the shadow */
+}
+
+.social-icons a:hover {
+  filter: drop-shadow(
+    0 0 10px rgba(255, 0, 123, 0.7)
+  ); /* Adjust the hover shadow color */
+}
+
+.social-icons {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+h4 {
+  margin: 0; /* Remove default margin */
+  font-size: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .intro-container {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image:  url('/back.png');
+  background-image: url("/back.png");
   background-size: cover;
   overflow: hidden;
 }
@@ -432,196 +451,239 @@ body,
   max-height: 100%;
 }
 
-@media only screen and (max-width: 768px) {
-  .homepage {
-    width: 95%;
-  }
+.switch {
+  display: none;
+  height: 10%;
+}
+.openMenu {
+  display: none;
+}
 
-  .homepage .text {
-    width: 90%;
-    height: auto;
-    margin-bottom: 5%;
-  }
-
-  .homepage .text h1 {
-    font-size: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  .homepage .text p {
-    font-size: 18px;
-    padding-bottom: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-
-  .homepage .image {
-    width: 90%;
-    height: auto;
-    margin-bottom: 5%;
-  }
-
-  .homepage .image img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-  }
-
-  .form-container {
-    width: 95%;
-    margin-bottom: 20px;
-  }
-
-  .form {
-    width: 95%;
-  }
-
-  .form input {
-    width: 90%;
-  }
-
-  .message-input {
-    height: 80px;
-  }
-
-  .form button {
-    width: 30%;
-    margin-top: 10px;
-  }
-
+@media (max-width: 768px) {
   .navigation {
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex;
+  }
+  nav {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
     align-items: center;
+    width: 30%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .hidden {
+    display: none;
+    width: 1%;
   }
 
-  .navigation .logo {
-    margin: 0;
+  .hamburger {
+    display: block;
+    width: 100%;
+    font-size: 5rem;
+    color: white;
+    margin: 20px;
+    cursor: pointer;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  .openMenu {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease-in-out;
   }
 
-  .navigation nav ul {
-    flex-direction: row;
-    justify-content: flex-end;
+  .switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
-
-  .navigation .logo a img {
-    height: 120px;
-  }
-
-  .navigation nav ul li {
-    margin: 0 30px;
-  }
-
-  .app .navigation nav ul li a {
-    font-size: 30px;
-  }
-
-  main .error,
-  main .sending,
-  main .success {
-    border-width: 2px;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
-
-  .biography {
-    width: 95%;
-    height: auto;
+  .mobileList {
+    width: 100%;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
-    text-align: left;
+    margin: 0 auto;
   }
-
-  .biography h2 {
-    font-size: 3rem;
-    margin-bottom: 15px;
-  }
-
-  .biography h3 {
+  .mobileList a {
+    padding: auto;
+    align-items: center;
     font-size: 2.5rem;
-    margin-top: 30px;
-    margin-bottom: 15px;
+    margin: 0 auto;
+    text-align: center;
   }
 
-  .biography p {
-    background-color: rgba(0, 0, 0, 0.226);
-    border: 2px solid rgba(0, 0, 0, 0.363);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
+  main {
+    .homepage {
+      display: flex;
+      flex-direction: column-reverse;
+      width: 90%;
+      height: 60%;
+      margin-bottom: 70px;
+      align-items: center; /* Added */
+      background-color: rgba(0, 0, 0, 0.364); /* Glass effect background */
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    }
+    .text {
+      width: 100%;
+      /*Adjusted*/
+      height: 100%;
+      border-radius: 10px;
+      /*Addborderradius*/
+      margin: auto;
+      margin-left: 5%;
+      margin-top: 5%;
+      margin-bottom: 5%;
+      margin-right: 5%;
+      background-color: none;
+      /* Moved from 'p' selector */
+    }
 
-  .github-projects,
-  .audiovisual-projects {
-    max-width: 95%;
-    max-height: auto;
-    margin-bottom: 3%;
-  }
+    .image {
+      width: 90%;
+      height: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0%;
+      img {
+        max-width: 100%; /* Ensure the image fits perfectly within its container */
+        max-height: 100%;
+        object-fit: cover; /* Maintain aspect ratio and cover the container */
+        margin-bottom: 0%;
+      }
+    }
+    .biography {
+      text-align: center;
+      h2 {
+        margin-bottom: 20px;
+        font-size: 4rem;
+      }
+      h3 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-size: 2rem;
+      }
+      .bio {
+        background-color: rgba(0, 0, 0, 0.364); /* Add background color */
+        border-radius: 10px; /* Add border radius */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        margin: 0 auto;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        padding: 20px;
+        max-width: 80%;
+        max-height: 40%;
+        p {
+          text-align: left;
+          width: 100%;
+          margin: auto;
+          font-size: 25px;
+          padding-bottom: 20px;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
 
-  .project-card1 {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 10px;
-  }
+    .github-projects,
+    .audiovisual-projects {
+      width: 100%;
+    }
+    .project-card1 {
+      width: 80%;
+      img {
+        width: 90%;
+        height: 50%;
+        object-fit: cover; /* Maintain aspect ratio and cover the container */
+        filter: blur();
+      }
+    }
 
-  .project-card1 img {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    margin: 5px;
-    filter: grayscale(100%);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
+    .project-card1 button,
+    .video-container button,
+    .podcast-container button {
+      display: block;
+      width: 90%;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      gap: 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow */
+    }
 
-  .video-container iframe {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 10px;
-    object-fit: cover;
-    filter: grayscale(100%);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
+    .project-card1 button a,
+    .video-container button a,
+    .podcast-container button a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+    }
 
-  .podcast-container iframe {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    margin: 10px;
-    object-fit: cover;
-    filter: grayscale(100%);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
+    .video-container,
+    .podcast-container {
+      width: 100%;
+      margin: 0 auto;
+    }
 
-  .project-card1 img:hover,
-  .video-container iframe:hover,
-  .podcast-container iframe:hover {
-    filter: grayscale(0%);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-3px);
-    cursor: pointer;
+    .video-container iframe,
+    .podcast-container iframe {
+      width: 100%;
+      height: 80%;
+      object-fit: cover; /* Maintain aspect ratio and cover the container */
+      filter: blur();
+    }
   }
-
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-bottom: 100px;
+    .form {
+      width: 90%;
+      input {
+        width: 90%;
+      }
+      .message-input {
+        width: 90%;
+      }
+      button {
+        width: 30%;
+      }
+    }
+  }
   .footer {
-    height: 15%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
   }
-
   .social-icons a {
-    width: 25px;
-    margin: 5px;
+    width: 3rem; /* Adjust the width of the icons as needed */
+    height: auto; /* Maintain aspect ratio */
+    color: #fff; /* Set icon color to white */
+    margin: 10px 10px; /* Add margin between icons */
   }
-
   h4 {
-    font-size: 8px;
-    margin-bottom: 5px;
+    display: none;
   }
 }

@@ -12,14 +12,14 @@ function FooterHome() {
         <a href="https://www.youtube.com/channel/UCxu6mVIxWzKi2XFEmVJ7b4w" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faYoutube} />
         </a>
-        <a href="https://www.instagram.com/stefhanob" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/stefhanomusic" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faInstagram} />
         </a>
         <a href="https://www.linkedin.com/in/stefanoborrelli" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </div>
-      <h4>© 2024 Stefhano. All rights reserved.</h4>
+      <h4>© 2024 StefhanoMusic. All rights reserved.</h4>
     </footer>
   );
 };
